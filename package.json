@@ -1,0 +1,29 @@
+{
+  "name": "xvm-language-support",
+  "displayName": "XVM Language Support",
+  "description": "VS Code extension for XVM scripting language: lines not starting with '>' are comments, commands are between '>' and '<', and text after '<' is also comment.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wyllbassos/xvm-vscode-plugin.git"
+  },
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "xvm",
+      "aliases": ["XVM", "xvm"],
+      "extensions": [".xvm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xvm",
+      "scopeName": "source.xvm",
+      "path": "./syntaxes/xvm.tmLanguage.json"
+    }]
+  }
+}

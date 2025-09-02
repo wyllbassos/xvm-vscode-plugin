@@ -1,0 +1,87 @@
+{
+    "scopeName": "source.xvm",
+    "name": "XVM",
+    "patterns": [
+        {
+            "name": "comment.line.xvm",
+            "match": "^(?!>).*$"
+        },
+        {
+            "name": "meta.command.xvm",
+            "begin": ">",
+            "end": "<",
+            "beginCaptures": {
+                "0": {
+                    "name": "keyword.operator.xvm"
+                }
+            },
+            "endCaptures": {
+                "0": {
+                    "name": "keyword.operator.xvm"
+                }
+            },
+            "patterns": [
+                {
+                    "name": "entity.name.function.xvm",
+                    "match": "(?<=>(?:\\s*))[A-Za-z0-9_]+"
+                },
+                {
+                    "name": "variable.language.xvm",
+                    "match": "\\b[QqSsRr]?(PLN|UP|GGFN|TD|TT|CC|UT|G|IO|RC|IN|LP|GR|CM|TG|CT|VCT|CCT|PCT|TCT|XCT|SH|GVS|TB|DM|MS|AS|TM|IM|EM|ED|PE|GG_SCT|GG|VSLG|TCFG|VSET|VSIPA|VSBP|GXT|IP|VP|VSRS|VS|DB|GN|ZG|TRM|BTT|MA|LOG|GF|WFX|LG|LEX|NN|GP|PF|AD|UC|UR|RUV|V|LOG|APN|MX)\\w*\\b"
+                },
+                {
+                    "name": "variable.parameter.xvm",
+                    "match": "ID=[A-Za-z0-9]+"
+                },
+                {
+                    "name": "keyword.operator.subtraction.xvm",
+                    "match": "-\\d+"
+                },
+                {
+                    "name": "keyword.operator.addition.xvm",
+                    "match": "\\+\\d+"
+                },
+                {
+                    "name": "keyword.operator.multiplication.xvm",
+                    "match": "[xX]\\d+"
+                },
+                {
+                    "name": "keyword.operator.division.xvm",
+                    "match": "/\\d+"
+                },
+                {
+                    "name": "keyword.operator.lowfilter.xvm",
+                    "match": "[Ll]\\d+"
+                },
+                {
+                    "name": "keyword.operator.highfilter.xvm",
+                    "match": "[Hh]\\d+"
+                },
+                {
+                    "name": "keyword.operator.xvm",
+                    "match": "--|\\+\\+|\\+-|-+"
+                },
+                {
+                    "name": "keyword.operator.delimiter.xvm",
+                    "match": ">|<"
+                },
+                {
+                    "name": "constant.numeric.hex.xvm",
+                    "match": "#([A-Fa-f0-9]{4})"
+                },
+                {
+                    "name": "constant.numeric.hex.xvm",
+                    "match": "\\*[A-Fa-f0-9]{2}"
+                },
+                {
+                    "name": "punctuation.separator.xvm",
+                    "match": ";"
+                }
+            ]
+        },
+        {
+            "name": "comment.after.command.xvm",
+            "match": "(?<=<).*$"
+        }
+    ]
+}
